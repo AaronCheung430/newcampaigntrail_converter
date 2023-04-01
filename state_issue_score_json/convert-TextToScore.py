@@ -8,7 +8,7 @@ labor = ["Strong Crackdown", "Crackdown", "Conservative", "Moderate", "Sympathet
 imperialism = ["Expansionist", "Imperialist", "Exceptionalist", "Leans Exceptionalist", "Leans Anti-Imperialist", "Anti-Imperialist", "Pacifist"]
 
 
-with open('State_PKs_Orginial.csv') as file_obj:
+with open('../State_PKs_Orginial.csv') as file_obj:
 
     # Create reader object by passing the file
     # object to reader method
@@ -46,7 +46,7 @@ with open('State_PKs_Orginial.csv') as file_obj:
             #     print(row)
 
 
-print("csv with score output successfully")
+print("csv with score output successfully \nSee file 'State_PKs_Score.csv'")
 
 
 

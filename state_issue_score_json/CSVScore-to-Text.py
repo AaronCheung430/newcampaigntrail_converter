@@ -5,7 +5,7 @@ import csv
 import json
 
 data = []
-weight = 10
+weight = 1.0
 pk = 255
 
 with open('State_PKs_Score.csv') as file_obj:
@@ -24,10 +24,10 @@ with open('State_PKs_Score.csv') as file_obj:
         for issue in range(6, 11):
 
             issue_score = row[issue-2]
-            print(issue_score)
+            # print(issue_score)
             pk += 1
 
-            state_issue = {"model": "campaign_trail.state_issue_score", "pk": int(pk), "fields": {"state": int(state_num), "issue": int(issue), "state_issue_score": float(issue_score), "weight": int(weight)}}
+            state_issue = {"model": "campaign_trail.state_issue_score", "pk": int(pk), "fields": {"state": int(state_num), "issue": int(issue), "state_issue_score": float(issue_score), "weight": float(weight)}}
 
             data.append(state_issue)
 
@@ -40,4 +40,4 @@ f = open("state_issue_score_json_code.txt", "w")
 f.write(output_str)
 f.close()
 
-print("State issue score json for code 2 output successfully")
+print("State issue score json for code 2 output successfully \nSee file 'state_issue_score_json_code.txt'")
